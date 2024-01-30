@@ -115,6 +115,20 @@ layui.use('form', function(){
         window[flagVariable] = displayStyle;
     }
 
+    form.on('switch(switchr18)', function(data){
+        if(this.checked)
+            {
+                console.log(this.checked);
+                $(".r18").css("display","block");$(".nr18").css("display","none");
+                document.getElementById("badbad").value="lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst        quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet, ";
+        
+            }
+            else{
+                $(".r18").css("display","none");$(".nr18").css("display","block");
+                document.getElementById("badbad").value="nsfw, lowres, bad anatomy, bad hands, text, error, missing fingers, extra digit, fewer digits, cropped, worst      quality, low quality, normal quality, jpeg artifacts, signature, watermark, username, blurry, bad feet, ";}
+            
+          });
+
     form.on('switch(switchenglish)', function(data){
         toggleDisplay('english', data.elem.checked ? 'contents' : 'none', 'flagenglish');
     });
@@ -270,23 +284,23 @@ function cleartag()
 }
 
 
-var verno="5";
-var jdno="7";
-if (localStorage.getItem("uid") == verno) {
-    if (localStorage.getItem("jd") != jdno) {
-    document.getElementById("jd").style.display="block";
-    localStorage.setItem("jd", jdno);
-    }
-}
+// var verno="5";
+// var jdno="7";
+// if (localStorage.getItem("uid") == verno) {
+//     if (localStorage.getItem("jd") != jdno) {
+//     document.getElementById("jd").style.display="block";
+//     localStorage.setItem("jd", jdno);
+//     }
+// }
 
-if (localStorage.getItem("uid") != verno) {
-    document.getElementById("hint").style.display="block";
-    localStorage.setItem("uid", verno);
-}
+// if (localStorage.getItem("uid") != verno) {
+//     document.getElementById("hint").style.display="block";
+//     localStorage.setItem("uid", verno);
+// }
 
-document.getElementById("tagarea2").value=localStorage.getItem("tag2");
+// document.getElementById("tagarea2").value=localStorage.getItem("tag2");
 
-$(function() {
-    $('.draggable-element').arrangeable();
-    $('div').arrangeable({dragSelector: '.drag-area'});
-  });
+// $(function() {
+//     $('.draggable-element').arrangeable();
+//     $('div').arrangeable({dragSelector: '.drag-area'});
+//   });
