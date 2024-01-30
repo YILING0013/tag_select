@@ -41,8 +41,9 @@
 
    ```
    python -m venv venv
-   source venv/bin/activate  # Unix 或 MacOS
-   venv\Scriptsctivate  # Windows
+   source venv/bin/activate  # For Unix or MacOS
+   venv\Scripts\activate  # For Windows
+
    ```
 
 3. **安装依赖**：
