@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Xianyun-TagSelect</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layui.css') }}" media="all">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/hm.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js') }}"></script>
+    <style>
+        @font-face {
+          font-family: 'FontAwesome';
+          src: url("{{ url_for('static', filename='fonts/fontawesome-webfont.woff2') }}?v=4.7.0") format('woff2');
+        }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome.css') }}" media="all">    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/public.css') }}" media="all">
+</head>
+<body>
+<div class="layuimini-container">
+    <div class="layuimini-main">
+        <div class="layui-row layui-col-space15">
+            <div class="layui-col-md8">
+                <div class="layui-row layui-col-space15">
+                    <div class="layui-col-md12">
+                        <div class="layui-card">
+                            <div id="elements-container" style="min-height: 175px;height: auto;line-height: 20px;padding: 6px 10px;resize: vertical;">
+                                <div id="addtag"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="layui-col-md4">
+                <div class="layui-col-md12">
+                    <div class="layui-card">
+                        <div class="layui-card-header"><i class="fa fa-diamond"></i>output</div>
+                        <div class="layui-card-body">
+                            <div class="tagarea">
+                                <div style="display: flex;flex-flow: row nowrap;">
+                                    <div class="layui-form-item layui-form-text" style="flex: 100 100 0%;display: inline-block;vertical-align: middle;">
+                                        <div class="layui-input-block" style="margin-left:0px;">
+                                            <textarea id="tagarea" class="layui-textarea" placeholder="这里是调整后的词条输出"></textarea>
+                                        </div>
+                                    </div>
+                                    <div align="center" style="width: auto;margin-top: 1vw;margin-left:10px;display: inline-block;vertical-align: middle;">
+                                        <div>
+                                            <div style="margin-top:10px;">
+                                                <button class="layui-btn layui-btn-sm layui-btn-normal" onclick="copytag()">复制 Copy</button>
+                                            </div>
+                                            <div style="margin-top:10px;">
+                                                <button class="layui-btn layui-btn-sm layui-btn-danger" onclick="cleartag()">清空 Clear</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-card">
+                    <form class="layui-form" style="width:100%">
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">English</label>
+                        <input type="checkbox" lay-filter="switchenglish" lay-skin="switch" lay-text="ON|OFF" checked=""><div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">中文</label>
+                        <input type="checkbox" lay-filter="switchchinese" lay-skin="switch" lay-text="ON|OFF" checked=""><div class="layui-unselect layui-form-switch layui-form-onswitch" lay-skin="_switch"><em>ON</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">减权-</label>
+                        <input type="checkbox" lay-filter="switchminus" lay-skin="switch" lay-text="ON|OFF"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">加权+</label>
+                        <input type="checkbox" lay-filter="switchplus" lay-skin="switch" lay-text="ON|OFF"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">删除X</label>
+                        <input type="checkbox" lay-filter="switchdel" lay-skin="switch" lay-text="ON|OFF"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;">
+                        <label class="layui-form-label" style="font-weight:bold;width: auto;">加权符号切换</label>
+                        <input type="checkbox" lay-filter="switchicon" lay-skin="switch" lay-text="( )|{ }"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>{ }</em><i></i></div>
+                        </div>
+                        <div class="layui-input-block" style="display: inline-block;margin-left:0;"><label class="layui-form-label" style="font-weight:bold;width: auto;">R18</label>
+                        <input type="checkbox" name="switch" lay-skin="switch" lay-text="ON|OFF" lay-filter="switchr18" value="1"><div class="layui-unselect layui-form-switch" lay-skin="_switch"><em>OFF</em><i></i></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="layui-col-md12">
+                <div class="layui-tab layui-tab-card">
+                    <ul class="layui-tab-title">
+                        <li>画面&光影</li>
+                        <li class="layui-this">环境&生物</li>
+                        <li>构图&天气</li>
+                        <li>画风&材质</li>
+                        <li>背景&家具</li>
+                        <li>表情&情绪</li>
+                        <li>脸部&妆容</li>
+                        <li>身体&发型</li>
+                        <li>服装&风格</li>
+                        <li>配饰&物品</li>
+                        <li>人设&物种</li>
+                        <li>动作&姿态</li>
+                        <li>画师</li>
+                        <li>R18</li>
+                        <li>自定义</li>
+                    </ul>
+                    <div class="layui-tab-content" style="height: 28vw;overflow-y: scroll;">
+                        <div class="layui-tab-item" id="Scene"></div>
+                        <div class="layui-tab-item layui-show" id="Environment"></div>
+                        <div class="layui-tab-item" id="Composition"></div>
+                        <div class="layui-tab-item" id="Art_Style"></div>
+                        <div class="layui-tab-item" id="Background"></div>
+                        <div class="layui-tab-item" id="Expression"></div>
+                        <div class="layui-tab-item" id="Face"></div>
+                        <div class="layui-tab-item" id="Body"></div>
+                        <div class="layui-tab-item" id="Clothing"></div>
+                        <div class="layui-tab-item" id="Accessories"></div>
+                        <div class="layui-tab-item" id="Character_Design"></div>
+                        <div class="layui-tab-item" id="Action"></div>
+                        <div class="layui-tab-item" id="Illustrator"></div>
+                        <div class="layui-tab-item" id="r18"><p class="nr18">请打开开关</p></div>
+                        <div class="layui-tab-item" id="user">
+                            <div class="layui-card">
+                                <div class="layui-card-header"><i class="fa fa-diamond"></i>input</div>
+                                <div class="layui-card-body" id="user-Tag">
+                                    <div class="tagarea">
+                                        <div style="display: flex;flex-flow: row nowrap;">
+                                            <div class="layui-form-item layui-form-text" style="flex: 100 100 0%;display: inline-block;vertical-align: middle;">
+                                                <div class="layui-input-block" style="margin-left:0px;">
+                                                    <textarea id="tagarea3" class="layui-textarea" placeholder="请在此输入你的tag串,tag将按照逗号划分开并添加为页面元素"></textarea>
+                                                </div>
+                                            </div>
+                                            <div align="center" style="width: auto;margin-top: 1vw;margin-left:10px;display: inline-block;vertical-align: middle;">
+                                                <div>
+                                                    <div style="margin-top:10px;">
+                                                        <button class="layui-btn layui-btn-sm layui-btn-normal" onclick="loadtag()">加载 Tag</button>
+                                                    </div>
+                                                    <div style="margin-top:10px;">
+                                                        <button class="layui-btn layui-btn-sm layui-btn-danger" onclick="clearall()">清空 Tag</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 此处插入 -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="{{ url_for('static', filename='js/layui.js') }}" charset="utf-8"></script>
+<script src="{{ url_for('static', filename='js/loadTags.js') }}"></script>
+<script>
+    // 加载特定的类别标签
+    loadTags('Environment');
+    loadTags('Scene');
+    loadTags('Composition');
+    loadTags('Art_Style');
+    loadTags('Background');
+    loadTags('Expression');
+    loadTags('Face');
+    loadTags('Body');
+    loadTags('Clothing');
+    loadTags('Accessories');
+    loadTags('Character_Design');
+    loadTags('Action');
+    loadTags('Illustrator');
+    loadTags('r18');
+</script>
+<script>
+    // Function to load tags
+    function loadtag() {
+        var input = document.getElementById('tagarea3').value;
+        var tags = input.split(/,|，/);
+
+        var insertionPoint = document.getElementById('user-Tag');
+        clearall();
+        var tagCounter = 1;
+        tags.forEach(function(tag) {
+            if (tag.trim().length > 0) {
+                var div = document.createElement('div');
+                div.className = 'tagbutton';
+                div.id = 'butuserTag_' + tagCounter++; 
+                div.innerHTML = '<div class="minus" style="display: none;">-</div>' +
+                                '<div class="plus" style="display: none;">+</div>' +
+                                '<div class="buttext">' +
+                                    '<span class="english">' + tag.trim() + '</span>' +
+                                    '<span class="chinese"> </span>' +
+                                '</div>';
+
+                insertionPoint.appendChild(div);
+            }
+        });
+    }
+    function clearall() {
+        var userTagDiv = document.getElementById('user-Tag');
+        var existingTags = userTagDiv.querySelectorAll('.tagbutton');
+        existingTags.forEach(function(tag) {
+            tag.remove();
+        });
+    }
+</script>
+</body>
+</html>
