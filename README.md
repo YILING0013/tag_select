@@ -2,7 +2,7 @@
 # Flask 标签选择器项目
 
 ## 简介
-标签选择器是一个基于 Flask 框架的 Web 应用程序，程序集成了蓝图（Blueprint），用于模块化和可重用性。你可以在此基础上不断进行扩展。
+标签选择器是一个基于 Flask 框架的 Web 应用程序，程序集成了蓝图（Blueprint），用于模块化和可重用性。你可以在此基础上不断进行扩展。改编自项目https://github.com/WolfChen1996/NovelAI-tag-generator
 
 [![2024-01-30-103950.png](https://i.postimg.cc/cLp422HR/2024-01-30-103950.png)](https://postimg.cc/v4vs6P5T)*Tag选择*
 
