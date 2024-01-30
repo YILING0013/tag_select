@@ -11,7 +11,7 @@
 [![2024-01-30-103856.png](https://i.postimg.cc/52Y2Pbx9/2024-01-30-103856.png)](https://postimg.cc/LJSS5dYG)*自定义Tag*
 
 ## 体验网站
-- **网站地址**：http://nai3.xianyun.cool/tag_select
+- **网站地址**：http://nai3.xianyun.cool/tag_selector
 
 ## 功能特点
 - **蓝图集成**：使用 Flask 蓝图进行模块化设计。
