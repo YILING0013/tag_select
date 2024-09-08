@@ -1,0 +1,6 @@
+baidu_translate_url: 'https://fanyi-api.baidu.com/api/trans/vip/translate'
+baidu_translate_credentials:
+  - app_id: 'app_id'
+    secret_key: 'secret_key'
+  - app_id: 'app_id'
+    secret_key: 'secret_key'
