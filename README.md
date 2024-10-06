@@ -16,7 +16,7 @@
 
 ## 体验网站
 
-- **网站地址**：https://nai3.xianyun.cool/tag_selector
+- **网站地址**：https://idlecloud.cc/
 
 ## 功能特点
 
@@ -95,7 +95,7 @@ pip install -r requirements.txt
 
 ### 4. **准备 YAML 文件**：
 
-将 YAML 文件放置在 `tag_yaml` 目录中。每个文件应对应一个标签类别。
+将 YAML 文件放置在 `tag_json` 目录中。每个文件应对应一个标签类别。
 
 ### 5. **配置翻译 API**：
 
@@ -119,6 +119,6 @@ python app.py
 http://127.0.0.1:5000/api_tag/get_tags/<类别>
 ```
 
-将 `<类别>` 替换为 `tag_yaml` 目录中对应的 YAML 文件的类别名称。
+将 `<类别>` 替换为 `tag_json` 目录中对应的 JSON 文件的类别名称。
 
 ---
