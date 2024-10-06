@@ -1,0 +1,184 @@
+{
+    "画面增强": {
+        "令人惊叹的": "amazing",
+        "更多细节": "high detail",
+        "超详细": "ultra-detailed",
+        "非常详细的8k壁纸": "extremely detailed 8k wallpaper"
+    },
+    "光": {
+        "光": "light",
+        "正面光": "frontlight",
+        "侧面光": "sidelight",
+        "背光": "backlight",
+        "逆光": "backlighting",
+        "黄金时段照明": "golden hour lighting",
+        "最佳照明": "best illumination",
+        "闪光": "glint",
+        "镜头光晕": "lens flare",
+        "过曝光": "overexposure",
+        "电影光照": "cinematic lighting",
+        "戏剧光": "dramatic lighting",
+        "光线追踪": "ray tracing",
+        "精细光照": "detailed lighting",
+        "漏光": "light leaks",
+        "射线光束": "light rays",
+        "浮动光斑": "floating light spot",
+        "阳光": "sunlight",
+        "太阳光束": "sunbeam",
+        "斑驳的阳光": "dappled sunlight",
+        "阳光透过树木": "sunlight filtering through trees",
+        "月光": "moonlight",
+        "圣光": "holy light",
+        "从上而下的光线": "god light",
+        "发光": "glowing",
+        "荧光": "glowing light",
+        "漂亮精细的发光": "beautiful detailed glow",
+        "反射": "reflection",
+        "涟漪": "ripples",
+        "云隙光": "crepuscular rays",
+        "晨光": "morning glory",
+        "霓虹灯": "neon",
+        "傍晚背对阳光": "against backlight at dusk",
+        "明暗对比": "chiaroscuro"
+    },
+    "影": {
+        "影": "shadow",
+        "阴影": "shade",
+        "有影的": "shady",
+        "最佳阴影": "best shadow",
+        "强烈阴影": "intense shadows",
+        "戏剧阴影": "dramatic shadow",
+        "树影": "tree shade",
+        "投下阴影": "drop shadow",
+        "眼部阴影": "shading eyes"
+    },
+    "插画和CG": {
+        "插画": "illustration",
+        "游戏CG": "game cg",
+        "人像": "portrait",
+        "官方图": "official art"
+    },
+    "封面和书本": {
+        "封面": "cover page",
+        "书本封面": "book cover",
+        "杂志扫图": "magazine scan",
+        "杂志封面": "magazine cover",
+        "同人志封面": "doujinshi doujin cover",
+        "动漫杂志": "megami magazine",
+        "漫画书": "comic book"
+    },
+    "漫画": {
+        "漫画": "comic",
+        "无声漫画": "silent comic",
+        "四格漫画": "4koma"
+    },
+    "动画": {
+        "伪截图": "fake screeshot",
+        "动画截图": "anime screecap",
+        "原画": "color trace"
+    },
+    "设定": {
+        "角色设定": "character design",
+        "设定集": "artbook",
+        "三视图": "three views",
+        "多视角": "multiple views",
+        "Q版": "chibi"
+    },
+    "功能": {
+        "抱枕": "dakimakura",
+        "海报": "poster",
+        "苏维埃海报": "soviet poster",
+        "卡牌": "card",
+        "塔罗牌": "tarot"
+    },
+    "其他画面": {
+        "照片": "photo",
+        "纸模": "papercraft",
+        "手办": "figure",
+        "表情展示": "expression chart",
+        "表情差分": "expressions",
+        "拼贴画": "collage",
+        "罪犯照片": "mugshot"
+    },
+    "颜色风格": {
+        "主题色": "color:theme",
+        "色彩丰富": "colorful",
+        "多种颜色": "multicolored",
+        "单色调": "monochrome",
+        "半色调": "halftone",
+        "灰阶": "greyscale",
+        "专色": "spot color",
+        "有限的调色板": "limited palette",
+        "部分上色": "partly colored",
+        "高对比": "high contrast",
+        "哑光": "muted color",
+        "苍白颜色": "pale color",
+        "霓虹色彩": "neon palette"
+    },
+    "画面元素": {
+        "无人": "no humans",
+        "描边": "outline",
+        "边缘": "border",
+        "上下黑边": "letterboxed",
+        "圣光(或烟雾和其他物体)打码": "convenient censoring"
+    },
+    "滤镜": {
+        "色像差": "chromatic aberration",
+        "焦散": "caustic",
+        "锐聚焦": "sharp focus",
+        "景深": "depth of field",
+        "hdr": "hdr",
+        "模糊": "blurred picture",
+        "模糊背景": "blurry background",
+        "模糊前景": "blurry foreground",
+        "高斯模糊": "gaussian blur",
+        "剪影": "silhouette",
+        "运动模糊": "motion blur"
+    },
+    "气泡": {
+        "对话气泡": "speech bubble",
+        "想法气泡": "thought bubble",
+        "气泡！": "spoken exclamation mark note",
+        "气泡？": "spoken question mark note",
+        "气泡害羞": "spoken blush",
+        "气泡心": "spoken heart",
+        "气泡音符": "spoken musical note"
+    },
+    "音符": {
+        "音乐": "music",
+        "音符": "musical note",
+        "四分音符": "quarter note",
+        "八分音符": "eighth note"
+    },
+    "线条": {
+        "运动线": "motion lines",
+        "速度线": "speed lines"
+    },
+    "其他符号": {
+        "心跳": "heartbeat"
+    },
+    "一天": {
+        "日出": "sunrise",
+        "白天": "day",
+        "黄金时段": "golden hour",
+        "黄昏": "dusk",
+        "落日": "sunset",
+        "夜间": "night",
+        "晚上": "evening",
+        "深夜": "late at night"
+    },
+    "四季": {
+        "春季": "spring season",
+        "春": "spring",
+        "夏": "summer",
+        "秋": "autumn",
+        "冬": "winter"
+    },
+    "节日": {
+        "情人节": "valentine",
+        "七夕节(日本)": "tanabata",
+        "万圣节": "halloween",
+        "圣诞节": "christmas",
+        "感恩节": "thanksgiving"
+    }
+}
