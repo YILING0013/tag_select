@@ -1,0 +1,94 @@
+{
+    "盔甲": {
+        "armor": "盔甲",
+        "helmet": "头盔",
+        "shoulder_armor": "肩甲",
+        "vambraces": "护臂",
+        "japanese_armor": "日本盔甲",
+        "muneate": "胸铠",
+        "greaves": "护腿",
+        "arm_guards": "护臂",
+        "iron_cross": "铁十字",
+        "faulds": "裙形盔甲",
+        "full_armor": "全盔甲",
+        "black_armor": "黑色盔甲",
+        "white_armor": "白色盔甲",
+        "plate_armor": "板甲",
+        "chainmail": "链甲",
+        "leg_armor": "腿甲",
+        "kirin_(armor)": "麒麟（盔甲）",
+        "armored_legwear": "铠甲腿部"
+    },
+    "防护服": {
+        "gauntlets": "护腕",
+        "breastplate": "胸甲",
+        "combat_helmet": "战斗头盔",
+        "arm_armor": "臂甲",
+        "body_armor": "护甲",
+        "berserker_armor": "狂战士铠甲",
+        "meat_armor": "肉盔甲"
+    },
+    "其他": {
+        "pauldrons": "护肩",
+        "epaulettes": "肩章",
+        "single_pauldron": "单肩甲",
+        "unworn_helmet": "未佩戴头盔",
+        "red_armor": "红色盔甲",
+        "crotch_plate": "裆部铠板",
+        "green_armor": "绿色铠甲",
+        "purple_armor": "紫色铠甲",
+        "cuirass": "胸甲",
+        "scale_armor": "鳞片铠甲",
+        "sabaton": "铠靴",
+        "spiked_pauldrons": "尖刺肩甲",
+        "spiked_armor": "尖刺盔甲",
+        "spiked_helmet": "带刺头盔",
+        "unworn_armor": "未穿的盔甲",
+        "multicolored_armor": "彩色盔甲",
+        "high-cut_armor_(persona)": "铠甲-其他",
+        "barioth_(armor)": "巴里奥斯（铠甲）",
+        "brown_armor": "棕色盔甲",
+        "kettle_helm": "水壶盔",
+        "glowing_armor": "发光盔甲",
+        "nomeazog": "盔甲（其他）",
+        "brown_bridal_gauntlets": "棕色新娘手套",
+        "living_armor": "活盔甲",
+        "bone_armor": "骨甲",
+        "bnahabra_(armor)": "巴纳哈巴（盔甲）",
+        "impossible_armor": "不可能的盔甲",
+        "brigandine_(armor)": "布里甘丁（铠甲）"
+    },
+    "未来系": {
+        "saiyan_armor": "赛亚人盔甲",
+        "asymmetrical_armor": "不对称护甲",
+        "magitek_armor": "魔法科技盔甲",
+        "robobot_armor": "机器人盔甲",
+        "full_armor_gundam": "全装甲高达"
+    },
+    "中古系": {
+        "leather_armor": "皮铠",
+        "chinese_armor": "中国铠甲",
+        "fur-trimmed_armor": "毛皮边铠甲",
+        "greave_(asterism)": "小腿铠甲 (星群)",
+        "lagombi_(armor)": "拉戈比（盔甲）"
+    },
+    "破损": {
+        "broken_armor": "破损铠甲"
+    },
+    "现代系": {
+        "flak_jacket": "防弹衣",
+        "stahlhelm": "斯塔尔兹",
+        "plackart": "重铠",
+        "helm_(nikke)": "头盔（NIKKE）",
+        "yellow_armor": "黄色盔甲",
+        "reactive_armor": "反应装甲",
+        "ghillie_suit": "伪装服",
+        "fusion_suit": "融合服"
+    },
+    "装甲": {
+        "ornate_armor": "华丽铠甲"
+    },
+    "古中古系": {
+        "roman_armor": "罗马盔甲"
+    }
+}

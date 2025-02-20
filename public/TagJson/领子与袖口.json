@@ -1,0 +1,56 @@
+{
+    "长袖": {
+        "long_sleeves": "长袖",
+        "white_sleeves": "白色袖子",
+        "sleeves_past_fingers": "袖子超过手指"
+    },
+    "短袖": {
+        "short_sleeves": "短袖",
+        "puffy_short_sleeves": "蓬松短袖"
+    },
+    "其他": {
+        "puffy_sleeves": "蓬松袖",
+        "wide_sleeves": "宽袖",
+        "alternate_sleeve_length": "可选袖长",
+        "bib_collar": "围兜领"
+    },
+    "装饰": {
+        "sailor_collar": "水手领",
+        "sleeves_past_wrists": "袖子过腕",
+        "ascot": "领结",
+        "detached_collar": "可拆卸领子",
+        "frilled_cuffs": "荷叶边袖口",
+        "pink_sailor_collar": "粉色水手领",
+        "sleeve_bow": "袖子上的蝴蝶结",
+        "heart_collar": "心形领",
+        "ascot_between_breasts": "在胸部之间的领带",
+        "feather_collar": "羽毛领",
+        "striped_sleeve_cuffs": "条纹袖口",
+        "armored_collar": "装甲领",
+        "lace-trimmed_sailor_collar": "蕾丝边水手领"
+    },
+    "吊带": {
+        "halterneck": "吊带"
+    },
+    "领子": {
+        "wing_collar": "翼领",
+        "white_sailor_collar": "白色水手领",
+        "black_sailor_collar": "黑色水手领",
+        "high_collar": "高领",
+        "frilled_shirt_collar": "荷叶边衬衫领",
+        "v-neck": "V领",
+        "notched_lapels": "缺口翻领",
+        "grey_sailor_collar": "灰色水手领",
+        "red_sailor_collar": "红色水手领",
+        "green_sailor_collar": "绿色水手领",
+        "plaid_collar": "格子领子"
+    },
+    "袖子": {
+        "sleeves_rolled_up": "卷起袖子",
+        "single_sleeve": "单袖",
+        "purple_sleeves": "紫色袖子",
+        "sleeves_pushed_up": "推起的袖子",
+        "sode": "袖子",
+        "single_sode": "单边袖子"
+    }
+}

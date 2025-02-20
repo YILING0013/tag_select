@@ -1,0 +1,50 @@
+{
+    "其他": {
+        "cowboy_shot": "跟拍",
+        "multiple_views": "多视角",
+        "close-up": "特写",
+        "tall_image": "高图",
+        "other_focus": "其他焦点",
+        "black_border": "黑色边框",
+        "vehicle_focus": "车辆焦点",
+        "grey_border": "灰色边框",
+        "column_lineup": "列柱阵容",
+        "vanishing_point": "消失点",
+        "hand_focus": "手部聚焦",
+        "box_art": "盒装艺术",
+        "card_parody": "卡片模仿",
+        "commentary_typo": "评论错误",
+        "through_screen": "穿透屏幕",
+        "atmospheric_perspective": "大气透视",
+        "weapon_background": "武器背景",
+        "multiple_pov": "多种视角",
+        "layered": "分层"
+    },
+    "视角": {
+        "pov": "视角",
+        "dutch_angle": "倾斜角度",
+        "foreshortening": "透视",
+        "wide_shot": "广角镜头",
+        "perspective": "透视",
+        "three_quarter_view": "三分之四视角",
+        "isometric": "等距",
+        "shaft_look": "构图视角",
+        "forced_perspective": "强制透视"
+    },
+    "对称": {
+        "symmetry": "对称",
+        "front_and_back": "前后"
+    },
+    "构成": {
+        "column": "列"
+    },
+    "焦点": {
+        "back_focus": "背景聚焦"
+    },
+    "区域": {
+        "very_wide_shot": "超宽幅镜头"
+    },
+    "元素": {
+        "clothes_on_wall": "墙上的衣服"
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "其他": {
+        "mole_under_eye": "眼下的痣",
+        "upper_teeth_only": "仅上排牙齿",
+        "facial_hair": "面部毛发",
+        "scar_across_eye": "眼部伤疤",
+        "bags_under_eyes": "眼袋",
+        "bandaid_on_face": "脸上的创可贴",
+        "round_teeth": "圆形牙齿",
+        "split_mouth": "裂嘴",
+        "star_facial_mark": "星形面部标记",
+        "partially_shaded_face": "部分阴影的脸",
+        "extra_faces": "额外面部",
+        "circle_facial_mark": "圆形面部标记",
+        "sunken_cheeks": "内陷的面颊",
+        "triangle_facial_mark": "三角形面部纹样",
+        "diamond_facial_mark": "钻石脸部印记",
+        "flower_facial_mark": "花纹面部印记",
+        "dangling_eye": "悬挂的眼睛",
+        "lipstick_mark_on_forehead": "额头上的口红印"
+    },
+    "嘴巴": {
+        "lips": "嘴唇",
+        "pink_lips": "粉色嘴唇",
+        "red_lips": "红色嘴唇"
+    },
+    "化妆": {
+        "makeup": "化妆",
+        "lipstick_mark_on_face": "嘴唇印记在脸上"
+    },
+    "修饰": {
+        "shaded_face": "阴影面孔",
+        "scar_on_face": "脸上的伤疤",
+        "covered_face": "覆盖脸部",
+        "teardrop_facial_mark": "泪滴脸部标记",
+        "forehead_writing": "额头文字",
+        "star_on_cheek": "脸颊上的星星",
+        "scar_across_eyebrow": "眉毛上的伤疤"
+    },
+    "鼻子": {
+        "dot_nose": "点状鼻子",
+        "nose": "鼻子"
+    },
+    "额头": {
+        "forehead": "前额"
+    },
+    "眉毛": {
+        "short_eyebrows": "短眉毛",
+        "eyebrows_hidden_by_hair": "眉毛被发遮住"
+    },
+    "整体": {
+        "wet_face": "湿漉漉的脸"
+    },
+    "眼部装饰": {
+        "eye_tattoo": "眼部纹身"
+    }
+}
