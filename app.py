@@ -1,13 +1,13 @@
 import os
 import json
 from flask import Flask, jsonify, send_from_directory, request, abort
-# from flask_cors import CORS
+from flask_cors import CORS
 
 from tag_extractor import tag_extractorbp
 from search import search_blueprint
 
 app = Flask(__name__)
-# CORS(app)  # 允许所有跨域请求
+CORS(app)  # 允许所有跨域请求
 TAG_JSON_DIR = os.path.join(os.getcwd(), 'public', 'TagJson')
 
 app.register_blueprint(search_blueprint, url_prefix='/search')
