@@ -1,0 +1,70 @@
+{
+    "颜色": {
+        "color:eyes": "瞳色",
+        "color:sclera": "巩膜色",
+        "color:pupils": "虹膜色",
+        "heterochromia": "异色瞳",
+        "multicolored eyes": "彩色瞳",
+        "asymmetrical irises": "不对称虹膜"
+    },
+    "瞳孔形状": {
+        "star-shaped pupils": "星星眼",
+        "empty eyes": "失神眼",
+        "heart-shaped pupils": "心形眼",
+        "symbol-shaped pupils": "符号眼",
+        "slit pupils": "竖瞳",
+        "fire in eyes": "火焰眼",
+        "dilated pupils": "瞳孔放大"
+    },
+    "眼部装饰": {
+        "eye shadow": "眼影"
+    },
+    "其他": {
+        "bright eyes": "明亮的眼睛",
+        "third eye": "第三只眼",
+        "beautiful detailed eyes": "漂亮精细的眼睛",
+        "big eyes": "大眼睛",
+        "eye reflection": "眼睛反射"
+    },
+    "整体": {
+        "cute face": "可爱脸",
+        "anime face": "动漫脸"
+    },
+    "额头": {
+        "big forehead": "大额头",
+        "forehead mark": "额头记号",
+        "forehead jewel": "额前宝石"
+    },
+    "眼部": {
+        "scar across eye": "眼睛疤痕"
+    },
+    "眉毛": {
+        "eyebrows visible through hair": "头发后的眉毛",
+        "short eyebrows": "短眉毛",
+        "thick eyebrows": "粗眉毛",
+        "v shaped eyebrows": "男性俊眉"
+    },
+    "嘴巴": {
+        "skin fang": "虎牙",
+        "upper teech": "上牙",
+        "fangs": "尖牙",
+        "round teeth": "圆齿",
+        "teeth": "牙齿",
+        "tongue": "舌头"
+    },
+    "修饰": {
+        "mole under eye": "泪痣",
+        "mole under mouth": "美人痣",
+        "makeup": "浓妆",
+        "facial hair": "胡须(男)",
+        "facepaint": "面纹",
+        "scar on cheek": "脸上疤痕",
+        "shaded face": "阴影面孔",
+        "scar on face": "脸上的伤疤",
+        "covered face": "覆盖脸部",
+        "teardrop facial mark": "泪滴脸部标记",
+        "forehead writing": "额头文字",
+        "star on cheek": "脸颊上的星星",
+        "scar across eyebrow": "眉毛上的伤疤"
+    }
+}

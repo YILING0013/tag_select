@@ -1,0 +1,76 @@
+{
+    "传统材质": {
+        "traditional media": "传统纸画",
+        "faux traditional media": "签绘风格",
+        "drawing": "绘画风格",
+        "child drawing": "涂鸦",
+        "ink and wash painting": "水墨",
+        "watercolor": "水彩",
+        "oil painting": "油画",
+        "sketch": "素描",
+        "graphite": "炭笔画",
+        "pencil sketch lines": "铅笔画",
+        "watercolor pencil": "彩铅绘",
+        "calligraphy brush": "书法毛笔",
+        "pastel": "粉色蜡笔",
+        "pastel colors": "粉彩",
+        "guache": "水粉",
+        "sumi-e": "墨绘",
+        "tempera": "蛋彩画",
+        "copics": "马克笔",
+        "acrylic paint": "丙烯漆料画",
+        "fountain pen": "蘸水笔画风",
+        "lineart": "线条画"
+    },
+    "流派": {
+        "renaissance": "文艺复兴",
+        "rococo": "洛可可",
+        "gothic": "哥特式",
+        "impressionism": "印象派",
+        "art nouveau": "新艺术",
+        "ukiyo-e style": "浮世绘"
+    },
+    "艺术家": {
+        "mucha style": "穆夏风格",
+        "claude monet": "莫奈",
+        "william turner": "透纳"
+    },
+    "年代风": {
+        "1980s": "1980年代",
+        "90's": "1990年代"
+    },
+    "作品": {
+        "persona 5": "p5风格",
+        "granblue fantasy": "碧蓝幻想风",
+        "idolmaster": "偶像大师",
+        "genshin impact": "原神",
+        "azur lane": "碧蓝航线",
+        "blue archive": "碧蓝档案",
+        "the legend of zelda": "塞尔达",
+        "cygames": "cygames",
+        "atelier": "炼金工房系列",
+        "shadowverse": "影之诗",
+        "steins;gate": "命运石之门",
+        "violet evergarden": "紫罗兰的永恒花园"
+    },
+    "其他风格": {
+        "roughsketch": "草图素描",
+        "realistic": "写实",
+        "photo realistic": "照片写实",
+        "octane render": "OC渲染图",
+        "8bit": "8位机风格",
+        "pixel art": "像素画",
+        "voxel art": "体素图",
+        "screentones": "网点",
+        "flat shading": "平面着色",
+        "flat color": "平涂风格",
+        "lmpasto": "厚涂",
+        "retro artstyle //老动画": "赛璐璐动画",
+        "promare": "扳机风",
+        "nostalgic": "怀旧",
+        "retro": "复古风",
+        "vintage": "复古设计",
+        "old-fashioned": "旧时尚",
+        "dreamy": "梦幻的"
+    }
+}
