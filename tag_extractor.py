@@ -6,7 +6,6 @@ import time
 from datetime import datetime
 import requests
 from flask import Blueprint, request, jsonify
-from bs4 import BeautifulSoup
 import yaml
 
 # 从yaml文件加载配置
@@ -184,53 +183,90 @@ def translate_texts(texts, from_lang='auto', to_lang='zh'):
 # 创建蓝图
 tag_extractorbp = Blueprint('tag_extractor', __name__)
 
-@tag_extractorbp.route('/extract_tags', methods=['GET'])
-def extract_tags():
-    # 从请求参数中获取URL
-    url = request.args.get('url')
-    if not url:
-        return jsonify({"error": "Missing URL parameter"}), 400
-
-    # 发送GET请求到指定的URL
-    try:
-        response = requests.get(url)
-        response.raise_for_status()
-    except requests.RequestException as e:
-        return jsonify({"error": str(e)}), 500
-
-    # 解析HTML内容
-    soup = BeautifulSoup(response.content, 'html.parser')
-
-    # 提取所需的数据并翻译
-    tags = []
-    tag_names = []
-    for li in soup.select('[data-tag-name]'):  # 选择所有具有 data-tag-name 属性的元素
-        # 提取标签名，并将下划线替换为空格
-        tag_name = li.get('data-tag-name').replace('_', ' ')
-        tag_names.append(tag_name)
-        tag_info = {
-            'tag_name': tag_name,
-            'is_deprecated': li.get('data-is-deprecated') == 'true',
-            'links': [a.text.strip() for a in li.find_all('a')],
-            'post_count': li.find('span', class_='post-count').get('title') if li.find('span', class_='post-count') else None
-        }
-        tags.append(tag_info)
-    
-    translated_tag_names = translate_texts(tag_names)  # 翻译标签名称列表
-
-    # 将翻译后的标签名添加到标签信息中
-    for tag, translated_tag_name in zip(tags, translated_tag_names):
-        tag['translated_tag_name'] = translated_tag_name
-
-    # 将提取和翻译的数据组装为JSON格式返回
-    return jsonify(tags)
+# 移除原来的 extract_tags 接口，因为现在前端直接获取和解析HTML
 
 @tag_extractorbp.route('/Tagtranslate', methods=['POST'])
 def translate():
-    data = request.get_json()
-    texts = data.get('texts')
-    if not texts:
-        return jsonify({"error": "Missing texts parameter"}), 400
+    """
+    翻译文本列表接口
+    接收格式: {"texts": ["text1", "text2", ...]}
+    返回格式: {"translated_texts": ["译文1", "译文2", ...]}
+    """
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "请求体为空"}), 400
+            
+        texts = data.get('texts')
+        if not texts:
+            return jsonify({"error": "缺少texts参数"}), 400
+            
+        if not isinstance(texts, list):
+            return jsonify({"error": "texts参数必须是数组"}), 400
+            
+        if len(texts) == 0:
+            return jsonify({"translated_texts": []}), 200
+            
+        # 过滤空字符串
+        valid_texts = [text.strip() for text in texts if text and text.strip()]
+        if len(valid_texts) == 0:
+            return jsonify({"translated_texts": []}), 200
+            
+        print(f"开始翻译 {len(valid_texts)} 个文本...")
+        translated_texts = translate_texts(valid_texts)
+        print(f"翻译完成")
+        
+        return jsonify({"translated_texts": translated_texts})
+        
+    except Exception as e:
+        print(f"翻译接口错误: {e}")
+        return jsonify({"error": f"服务器内部错误: {str(e)}"}), 500
 
-    translated_texts = translate_texts(texts)
-    return jsonify({"translated_texts": translated_texts})
+@tag_extractorbp.route('/translate_batch', methods=['POST'])
+def translate_batch():
+    """
+    批量翻译接口，支持更多参数
+    接收格式: {
+        "texts": ["text1", "text2", ...],
+        "from_lang": "auto",  // 可选，默认auto
+        "to_lang": "zh"       // 可选，默认zh
+    }
+    返回格式: {"translated_texts": ["译文1", "译文2", ...]}
+    """
+    try:
+        data = request.get_json()
+        if not data:
+            return jsonify({"error": "请求体为空"}), 400
+            
+        texts = data.get('texts')
+        if not texts:
+            return jsonify({"error": "缺少texts参数"}), 400
+            
+        if not isinstance(texts, list):
+            return jsonify({"error": "texts参数必须是数组"}), 400
+            
+        from_lang = data.get('from_lang', 'auto')
+        to_lang = data.get('to_lang', 'zh')
+        
+        if len(texts) == 0:
+            return jsonify({"translated_texts": []}), 200
+            
+        # 过滤空字符串
+        valid_texts = [text.strip() for text in texts if text and text.strip()]
+        if len(valid_texts) == 0:
+            return jsonify({"translated_texts": []}), 200
+            
+        print(f"开始批量翻译 {len(valid_texts)} 个文本 ({from_lang} -> {to_lang})...")
+        translated_texts = translate_texts(valid_texts, from_lang, to_lang)
+        print(f"批量翻译完成")
+        
+        return jsonify({
+            "translated_texts": translated_texts,
+            "from_lang": from_lang,
+            "to_lang": to_lang,
+            "count": len(translated_texts)
+        })
+        
+    except Exception as e:
+        print(f"批量翻译接口错误: {e}")
+        return jsonify({"error": f"服务器内部错误: {str(e)}"}), 500
