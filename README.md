@@ -1,8 +1,6 @@
-以下是修改后的 Markdown 文档，添加了关于翻译 API 的配置说明，并调整了安装方法：
-
----
-
 # Flask 标签选择器项目
+
+> 前端相关部分NextJS代码位于[tag_select_web](https://github.com/YILING0013/tag_select_web)
 
 ## 简介
 
@@ -14,9 +12,11 @@
 
 [![2024-01-30-103856.png](https://i.postimg.cc/52Y2Pbx9/2024-01-30-103856.png)](https://postimg.cc/LJSS5dYG) *自定义Tag*
 
+> 参考图已过时，具体以页面为准。
+
 ## 体验网站
 
-- **网站地址**：https://idlecloud.cc/
+- **网站地址**：https://tag.idlecloud.cc/
 
 ## 功能特点
 
@@ -110,15 +110,3 @@ python app.py
 ```
 
 这将启动 Flask 开发服务器，您可以访问 `http://127.0.0.1:5000/` 以使用标签选择界面。
-
-## API 使用
-
-要从特定类别获取标签，请使用以下 API 端点：
-
-```bash
-http://127.0.0.1:5000/api_tag/get_tags/<类别>
-```
-
-将 `<类别>` 替换为 `tag_json` 目录中对应的 JSON 文件的类别名称。
-
----
