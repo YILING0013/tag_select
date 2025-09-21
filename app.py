@@ -1,5 +1,6 @@
 import os
 import json
+import requests
 from flask import Flask, jsonify, send_from_directory, request, abort
 from flask_cors import CORS
 
@@ -10,12 +11,45 @@ app = Flask(__name__)
 CORS(app)  # 允许所有跨域请求
 TAG_JSON_DIR = os.path.join(os.getcwd(), 'public', 'TagJson')
 
+TURNSTILE_SECRET_KEY = "xxx" 
+
 app.register_blueprint(search_blueprint, url_prefix='/search')
 app.register_blueprint(tag_extractorbp, url_prefix='/api')
 
 @app.route('/')
 def index():
     return send_from_directory('static/frontend', 'index.html')
+
+# 用于Turnstile验证的新接口
+@app.route('/api/verify-turnstile', methods=['POST'])
+def verify_turnstile():
+    data = request.get_json()
+    token = data.get('token')
+    
+    if not token:
+        return jsonify({"success": False, "message": "缺少Token。"}), 400
+
+    # 使用Cloudflare进行验证
+    try:
+        response = requests.post(
+            'https://challenges.cloudflare.com/turnstile/v0/siteverify',
+            data={
+                'secret': TURNSTILE_SECRET_KEY,
+                'response': token,
+            }
+        )
+        response.raise_for_status() # 如果请求失败 (状态码 4xx or 5xx), 抛出异常
+        result = response.json()
+        
+        if result.get('success'):
+            return jsonify({"success": True, "message": "验证成功。"}), 200
+        else:
+            error_codes = result.get('error-codes', [])
+            return jsonify({"success": False, "message": "验证失败。", "error-codes": error_codes}), 400
+            
+    except requests.exceptions.RequestException as e:
+        return jsonify({"success": False, "message": f"连接验证服务器时出错: {e}"}), 500
+
 
 # 列出TagJson目录中的所有JSON文件
 @app.route('/api/json-files', methods=['GET'])
